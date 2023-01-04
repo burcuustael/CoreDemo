@@ -35,14 +35,19 @@ namespace BusinessLayer.Concrete
             _categoryDal.Update(category);
         }
 
-        public List<Category> GetAllList()
+        public List<Category> GetList()
         {
-            return _categoryDal.GetAll();
+            return _categoryDal.GetListAll();
         }
 
         public Category GetById(int id)
         {
             return _categoryDal.GetById(id);
         }
-    }
+
+		public List<Category> GetAllList()
+		{
+			throw new NotImplementedException();
+		}
+	}
 }
