@@ -7,9 +7,9 @@ namespace CoreDemo.ViewComponents.Comment
 	public class CommentListByBlog: ViewComponent
 	{
 		CommentManager cm = new CommentManager(new EfCommentRepository());
-		public IViewComponentResult Invoke()
+		public IViewComponentResult Invoke(int id)
 		{
-			var values = cm.GetAllList(2);
+			var values = cm.GetAllList(id);
 			return View(values);
 		}
 	}
